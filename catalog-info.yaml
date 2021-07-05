@@ -2,22 +2,22 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: account-api
-  description: Retrieve artist details
+  description: Retrieve account details
 spec:
-  type: openapi
+  type: grpc
   lifecycle: production
-  owner: artist-relations-team
-  system: artist-engagement-portal
+  owner: canais-back-end-squad
+  system: canais-back-end
   definition: |
-    openapi: "3.0.0"
+    openapi: "1.0.0"
     info:
       version: 1.0.0
-      title: Artist API
+      title: Account API
       license:
-        name: MIT
+        name: private
     servers:
-      - url: http://artist.spotify.net/v1
+      - url: http://cpwapp02-rj.modal.net.br
     paths:
-      /artists:
+      /list:
         get:
-          summary: List all artists
+          summary: List all accounts
