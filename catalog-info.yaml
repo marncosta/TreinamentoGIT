@@ -1,10 +1,23 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: APIAccount
-  title: Teste de integração com catalgo
-  description: Teste de metadata
+  name: account-api
+  description: Retrieve artist details
 spec:
   type: openapi
   lifecycle: production
-  owner: Fundos
+  owner: artist-relations-team
+  system: artist-engagement-portal
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Artist API
+      license:
+        name: MIT
+    servers:
+      - url: http://artist.spotify.net/v1
+    paths:
+      /artists:
+        get:
+          summary: List all artists
