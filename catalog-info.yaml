@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: APIAccount
+  title: Teste de integração com catalgo
+  description: Teste de metadata
+spec:
+  type: openapi
+  lifecycle: production
+  owner: Fundos
