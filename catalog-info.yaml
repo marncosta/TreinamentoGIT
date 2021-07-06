@@ -1,23 +1,23 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: account-api
-  description: Retrieve account details
+  name: credit-api
+  description: Retrieve credit details
 spec:
-  type: grpc
-  lifecycle: production
-  owner: canais-back-end-squad
-  system: canais-back-end
+  type: openapi
+  lifecycle: development
+  owner: credit-squad
+  system: credit
   definition: |
     openapi: "1.0.0"
     info:
       version: 1.0.0
-      title: Account API
+      title: Credit API
       license:
         name: private
     servers:
-      - url: http://cpwapp02-rj.modal.net.br
+      - url: http://cpwapp03a-rj.modal.net.br
     paths:
       /list:
         get:
-          summary: List all accounts
+          summary: List all credits
